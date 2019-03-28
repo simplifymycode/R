@@ -22,11 +22,10 @@ planets$Size[1]
 
 graph <- ggplot(data = planets) +
   geom_point(aes(x = factor(planets$Name, level = planets$Name), 
-                 y = planets$Size, 
-                 colour = "red", 
-                 size = 0, # contlrol size of filled part
-                 stroke = 3), # control size of stroke
-                 show.legend = FALSE) +
+                 y = planets$Size),
+             colour = "blue", 
+             size = 2,
+             show.legend = FALSE) +
   ylim(10000,16000) + # control y-axis
   labs(title = "Planes",
        subtitle = "Solar system",
@@ -46,10 +45,9 @@ vignette("ggplot2-specs")
 
 graph <- ggplot(data = planets) +
   geom_point(aes(x = planets$Size, 
-                 y = planets$Domain, 
-                 colour = "red", 
-                 size = 0, # control size of filled part
-                 stroke = 2), # control size of stroke
+                 y = planets$Domain),
+             colour = "red", 
+             size = 2,
              show.legend = FALSE) +
   xlim(10000,15500) + # control x-axis
   ylim(100,300) + # control y-axis
